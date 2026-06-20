@@ -2,11 +2,6 @@ import Link from "next/link";
 import { Zap } from "lucide-react";
 import { ThemeToggle } from "./ThemeToggle";
 
-const navLinks = [
-  { href: "/projects", label: "Projects" },
-  { href: "/contact", label: "Contact" },
-];
-
 export function Header() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 border-b border-slate-200/80 bg-white/80 backdrop-blur-md dark:border-slate-800/50 dark:bg-slate-950/80">
@@ -17,16 +12,19 @@ export function Header() {
           </div>
           <span className="text-xl font-semibold text-slate-900 dark:text-white">DrumNet</span>
         </Link>
-        <nav className="flex items-center gap-4">
-          {navLinks.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              className="text-sm font-medium text-gray-600 transition-colors hover:text-neon-cyan dark:text-gray-400"
-            >
-              {link.label}
-            </Link>
-          ))}
+        <nav className="flex items-center gap-5">
+          <Link
+            href="/projects"
+            className="text-sm font-medium text-gray-600 transition-colors hover:text-neon-cyan dark:text-gray-400"
+          >
+            Projects
+          </Link>
+          <Link
+            href="/contact"
+            className="btn-neon-shadow inline-flex items-center justify-center rounded-full border border-neon-cyan/40 bg-white px-5 py-2 font-mono text-sm font-semibold text-neon-cyan transition hover:border-neon-cyan dark:bg-slate-950 dark:text-neon-cyan"
+          >
+            Request Demo
+          </Link>
           <ThemeToggle />
         </nav>
       </div>
