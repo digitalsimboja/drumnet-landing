@@ -4,7 +4,7 @@ High-performance infrastructure and telemetry engineering — built with **Go** 
 
 ![DrumNet hero page](./docs/hero.png)
 
-DrumNet is a software consultancy that designs mission-critical systems for industrial telemetry and capital markets data. This repository is the public landing site and project showcase.
+DrumNet is a software consultancy that designs mission-critical systems for industrial telemetry and capital markets data.
 
 ---
 
@@ -35,7 +35,7 @@ DrumNet helps operators and vendors move from prototype to production-grade infr
 
 **Client outcome:** Cut unplanned downtime, scale from pilot fleets to 500+ machines without re-architecture, and give operators one pane of glass.
 
-→ [View VoltStream project page](/projects/voltstream) · `npm run dev` then open `/projects/voltstream`
+→ [View project page](https://drumnet.vercel.app/)
 
 ---
 
@@ -56,27 +56,7 @@ DrumNet helps operators and vendors move from prototype to production-grade infr
 
 **Client outcome:** Win market-open traffic, ship vendor-ready APIs, and prove reliability to regulated capital markets clients.
 
-→ [View NGX Trading project page](/projects/ngx-trading) · `npm run dev` then open `/projects/ngx-trading`
-
----
-
-## Getting started
-
-```bash
-git clone https://github.com/digitalsimboja/drumnet-landing.git
-cd drumnet-landing
-npm install
-npm run dev
-```
-
-Open [http://localhost:3000](http://localhost:3000).
-
-| Command | Description |
-|---|---|
-| `npm run dev` | Start development server |
-| `npm run build` | Production build |
-| `npm run start` | Run production server |
-
+→ [View NGX Trading project page](https://drumnet.vercel.app/) 
 ---
 
 ## Contact
