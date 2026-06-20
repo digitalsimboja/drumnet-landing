@@ -12,11 +12,11 @@ export function CapabilityCard({ icon, title, description, features }: Capabilit
         {icon}
       </div>
       <h3 className="text-xl font-semibold text-white mb-3">{title}</h3>
-      <p className="text-gray-400 mb-6 leading-relaxed">{description}</p>
+      <p className="text-gray-200 mb-6 leading-relaxed">{description}</p>
       <ul className="space-y-2">
         {features.map((feature) => (
-          <li key={feature} className="flex items-center gap-3 text-sm text-gray-500">
-            <span className="w-1 h-1 rounded-full bg-neon-cyan" />
+          <li key={feature} className="flex items-center gap-3 text-sm text-gray-300">
+            <span className="w-1.5 h-1.5 shrink-0 rounded-full bg-neon-cyan" />
             {feature}
           </li>
         ))}

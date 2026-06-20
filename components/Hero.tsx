@@ -27,7 +27,7 @@ export function Hero() {
             View Capabilities
           </a>
           <a
-            href="#contact"
+            href="/contact"
             className="px-8 py-3 rounded-lg border border-slate-700 text-gray-300 font-medium hover:border-neon-cyan hover:text-neon-cyan transition-colors"
           >
             Get in Touch
