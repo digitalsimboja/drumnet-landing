@@ -4,7 +4,7 @@ export function Hero() {
       <div className="max-w-6xl mx-auto text-center">
         <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-800/50 border border-slate-700/50 mb-8">
           <span className="w-2 h-2 rounded-full bg-neon-green animate-pulse" />
-          <span className="text-sm text-gray-400 font-mono">Systems Operating</span>
+          <span className="text-sm text-gray-400 font-mono">Systems & Infrastructure Engineering</span>
         </div>
 
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-tight mb-6">
