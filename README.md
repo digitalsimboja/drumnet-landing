@@ -61,6 +61,6 @@ DrumNet helps operators and vendors move from prototype to production-grade infr
 
 ## Contact
 
-**Email:** [digitalsimboja@gmail.com](mailto:digitalsimboja@gmail.com)
+**Contact:** [Request for a Demo](https://drumnet.vercel.app/contact)
 
 For VoltStream deployments, NGX market data platforms, or custom Go/AWS engineering — reach out via the site contact section or email directly.
