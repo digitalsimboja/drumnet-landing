@@ -24,13 +24,13 @@ const outcomes = [
 
 export default function NgxTradingProjectPage() {
   return (
-    <div className="min-h-screen bg-slate-950 flex flex-col">
+    <div className="min-h-screen bg-white dark:bg-slate-950 flex flex-col">
       <Header />
       <main className="flex-1">
         <div className="max-w-6xl mx-auto px-6 pt-24">
           <Link
             href="/projects"
-            className="inline-flex items-center gap-2 text-sm text-gray-400 hover:text-neon-cyan transition-colors"
+            className="inline-flex items-center gap-2 text-sm text-gray-600 transition-colors hover:text-neon-cyan dark:text-gray-400"
           >
             <ArrowLeft className="h-4 w-4" />
             All projects
@@ -58,7 +58,7 @@ export default function NgxTradingProjectPage() {
               {stack.map((item) => (
                 <span
                   key={item}
-                  className="rounded-full border border-slate-700 px-3 py-1 text-xs font-mono text-gray-400"
+                  className="rounded-full border border-slate-300 px-3 py-1 text-xs font-mono text-gray-600 dark:border-slate-700 dark:text-gray-400"
                 >
                   {item}
                 </span>
@@ -67,7 +67,7 @@ export default function NgxTradingProjectPage() {
           }
         />
 
-        <section className="py-20 md:py-32 px-6 bg-slate-900/30">
+        <section className="py-20 md:py-32 px-6 bg-slate-100 dark:bg-slate-900/30">
           <div className="max-w-6xl mx-auto">
             <SectionHeader
               title="Market Data Control Plane"
@@ -87,22 +87,22 @@ export default function NgxTradingProjectPage() {
               {outcomes.map((item) => (
                 <div
                   key={item.title}
-                  className="p-6 md:p-8 rounded-2xl bg-slate-850 border border-slate-800 hover:border-neon-cyan/30 transition-all duration-300"
+                  className="p-6 md:p-8 rounded-2xl border border-slate-200 bg-white transition-all duration-300 hover:border-neon-cyan/30 dark:border-slate-800 dark:bg-slate-850"
                 >
-                  <h3 className="text-xl font-semibold text-white mb-3">{item.title}</h3>
-                  <p className="text-gray-200 leading-relaxed">{item.copy}</p>
+                  <h3 className="text-xl font-semibold text-slate-900 dark:text-white mb-3">{item.title}</h3>
+                  <p className="text-gray-700 dark:text-gray-200 leading-relaxed">{item.copy}</p>
                 </div>
               ))}
             </div>
           </div>
         </section>
 
-        <section className="py-20 px-6 bg-slate-900/30">
+        <section className="py-20 px-6 bg-slate-100 dark:bg-slate-900/30">
           <div className="max-w-6xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-4">
               Built for NGX vendor workflows
             </h2>
-            <p className="text-gray-400 max-w-2xl mx-auto mb-10 leading-relaxed">
+            <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto mb-10 leading-relaxed">
               Exchange feeds enter a Go ingestion layer, pass through normalization and entitlement
               checks, and fan out over high-throughput APIs to downstream ISV products.
             </p>

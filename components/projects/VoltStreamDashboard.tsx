@@ -41,11 +41,11 @@ export function VoltStreamDashboard() {
       </div>
 
       <div className="grid gap-6 lg:grid-cols-3">
-        <div className="lg:col-span-2 rounded-2xl border border-slate-800 bg-slate-850 p-6">
+        <div className="lg:col-span-2 rounded-2xl border border-slate-200 bg-white dark:border-slate-800 dark:bg-slate-850 p-6">
           <div className="mb-5 flex items-center justify-between">
             <div>
-              <h3 className="text-sm font-semibold text-white">Fleet status</h3>
-              <p className="text-xs text-gray-400">Latest telemetry per asset</p>
+              <h3 className="text-sm font-semibold text-slate-900 dark:text-white">Fleet status</h3>
+              <p className="text-xs text-gray-500 dark:text-gray-400">Latest telemetry per asset</p>
             </div>
             <span className="inline-flex items-center gap-2 text-xs text-neon-green">
               <Radio className="h-3.5 w-3.5" />
@@ -56,14 +56,14 @@ export function VoltStreamDashboard() {
             {fleet.map((machine) => (
               <div
                 key={machine.id}
-                className="rounded-xl border border-slate-800 bg-slate-950/60 p-4"
+                className="rounded-xl border border-slate-200 bg-slate-50 dark:border-slate-800 dark:bg-slate-950/60 p-4"
               >
                 <div className="flex items-center gap-2">
                   <span className={`h-2 w-2 rounded-full ${statusColor(machine.status)}`} />
-                  <span className="font-mono text-xs font-semibold text-white">{machine.id}</span>
+                  <span className="font-mono text-xs font-semibold text-slate-900 dark:text-white">{machine.id}</span>
                 </div>
-                <p className="mt-1 text-xs text-gray-400">{machine.type}</p>
-                <div className="mt-3 flex items-center gap-4 text-xs text-gray-300">
+                <p className="mt-1 text-xs text-gray-500 dark:text-gray-400">{machine.type}</p>
+                <div className="mt-3 flex items-center gap-4 text-xs text-gray-600 dark:text-gray-300">
                   <span className="inline-flex items-center gap-1">
                     <Thermometer className="h-3.5 w-3.5 text-neon-cyan" />
                     {machine.temp}
@@ -78,19 +78,19 @@ export function VoltStreamDashboard() {
           </div>
         </div>
 
-        <div className="rounded-2xl border border-slate-800 bg-slate-850 p-6">
+        <div className="rounded-2xl border border-slate-200 bg-white dark:border-slate-800 dark:bg-slate-850 p-6">
           <div className="mb-4 flex items-center gap-2">
             <AlertTriangle className="h-4 w-4 text-amber-400" />
-            <h3 className="text-sm font-semibold text-white">Predictive alerts</h3>
+            <h3 className="text-sm font-semibold text-slate-900 dark:text-white">Predictive alerts</h3>
           </div>
           <ul className="space-y-3">
             {alerts.map((alert) => (
               <li
                 key={alert.id}
-                className="rounded-lg border border-slate-800 bg-slate-950/60 p-3"
+                className="rounded-lg border border-slate-200 bg-slate-50 dark:border-slate-800 dark:bg-slate-950/60 p-3"
               >
-                <p className="font-mono text-xs font-semibold text-white">{alert.id}</p>
-                <p className="mt-1 text-xs leading-5 text-gray-300">{alert.message}</p>
+                <p className="font-mono text-xs font-semibold text-slate-900 dark:text-white">{alert.id}</p>
+                <p className="mt-1 text-xs leading-5 text-gray-600 dark:text-gray-300">{alert.message}</p>
                 <p
                   className={`mt-2 text-[10px] font-mono uppercase tracking-wider ${
                     alert.severity === "critical" ? "text-red-400" : "text-amber-400"
@@ -104,11 +104,11 @@ export function VoltStreamDashboard() {
         </div>
       </div>
 
-      <div className="rounded-2xl border border-slate-800 bg-slate-850 p-6">
+      <div className="rounded-2xl border border-slate-200 bg-white dark:border-slate-800 dark:bg-slate-850 p-6">
         <div className="mb-4 flex items-center justify-between">
           <div>
-            <h3 className="text-sm font-semibold text-white">Ingestion throughput</h3>
-            <p className="text-xs text-gray-400">Last 60 seconds</p>
+            <h3 className="text-sm font-semibold text-slate-900 dark:text-white">Ingestion throughput</h3>
+            <p className="text-xs text-gray-500 dark:text-gray-400">Last 60 seconds</p>
           </div>
           <span className="text-xs font-mono text-neon-cyan">Peak 247 pkt/s</span>
         </div>

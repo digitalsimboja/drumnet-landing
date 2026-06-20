@@ -35,7 +35,7 @@ const projects = [
 
 export default function ProjectsPage() {
   return (
-    <div className="min-h-screen bg-slate-950 flex flex-col">
+    <div className="min-h-screen bg-white dark:bg-slate-950 flex flex-col">
       <Header />
       <main className="flex-1">
         <PageHero
@@ -56,7 +56,7 @@ export default function ProjectsPage() {
           }
         />
 
-        <section className="py-20 md:py-32 px-6 bg-slate-900/30">
+        <section className="py-20 md:py-32 px-6 bg-slate-100 dark:bg-slate-900/30">
           <div className="max-w-6xl mx-auto">
             <SectionHeader
               title="Projects & Case Studies"
@@ -68,7 +68,7 @@ export default function ProjectsPage() {
                 <Link
                   key={project.slug}
                   href={`/projects/${project.slug}`}
-                  className="group block p-6 md:p-8 rounded-2xl bg-slate-850 border border-slate-800 hover:border-neon-cyan/30 transition-all duration-300 hover-glow"
+                  className="group block p-6 md:p-8 rounded-2xl border border-slate-200 bg-white transition-all duration-300 hover:border-neon-cyan/30 hover-glow dark:border-slate-800 dark:bg-slate-850"
                 >
                   <div className="flex items-start justify-between gap-4">
                     <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-neon-cyan/10 to-neon-green/10 flex items-center justify-center text-neon-cyan group-hover:bg-neon-cyan/20 transition-colors">
@@ -76,11 +76,11 @@ export default function ProjectsPage() {
                     </div>
                     <ArrowRight className="w-5 h-5 text-gray-500 transition group-hover:text-neon-cyan group-hover:translate-x-1" />
                   </div>
-                  <h3 className="mt-6 text-xl font-semibold text-white mb-3">{project.title}</h3>
-                  <p className="text-gray-200 mb-6 leading-relaxed">{project.description}</p>
+                  <h3 className="mt-6 text-xl font-semibold text-slate-900 dark:text-white mb-3">{project.title}</h3>
+                  <p className="text-gray-700 dark:text-gray-200 mb-6 leading-relaxed">{project.description}</p>
                   <ul className="space-y-2">
                     {project.features.map((feature) => (
-                      <li key={feature} className="flex items-center gap-3 text-sm text-gray-300">
+                      <li key={feature} className="flex items-center gap-3 text-sm text-gray-600 dark:text-gray-300">
                         <span className="w-1.5 h-1.5 shrink-0 rounded-full bg-neon-cyan" />
                         {feature}
                       </li>

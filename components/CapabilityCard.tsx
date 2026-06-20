@@ -7,15 +7,15 @@ interface CapabilityCardProps {
 
 export function CapabilityCard({ icon, title, description, features }: CapabilityCardProps) {
   return (
-    <div className="group p-6 md:p-8 rounded-2xl bg-slate-850 border border-slate-800 hover:border-neon-cyan/30 transition-all duration-300 hover-glow">
+    <div className="group p-6 md:p-8 rounded-2xl border border-slate-200 bg-white transition-all duration-300 hover:border-neon-cyan/30 hover-glow dark:border-slate-800 dark:bg-slate-850">
       <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-neon-cyan/10 to-neon-green/10 flex items-center justify-center text-neon-cyan mb-6 group-hover:bg-neon-cyan/20 transition-colors">
         {icon}
       </div>
-      <h3 className="text-xl font-semibold text-white mb-3">{title}</h3>
-      <p className="text-gray-200 mb-6 leading-relaxed">{description}</p>
+      <h3 className="text-xl font-semibold text-slate-900 dark:text-white mb-3">{title}</h3>
+      <p className="text-gray-700 dark:text-gray-200 mb-6 leading-relaxed">{description}</p>
       <ul className="space-y-2">
         {features.map((feature) => (
-          <li key={feature} className="flex items-center gap-3 text-sm text-gray-300">
+          <li key={feature} className="flex items-center gap-3 text-sm text-gray-600 dark:text-gray-300">
             <span className="w-1.5 h-1.5 shrink-0 rounded-full bg-neon-cyan" />
             {feature}
           </li>

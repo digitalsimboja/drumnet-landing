@@ -29,20 +29,20 @@ export function NgxTradingDashboard() {
       </div>
 
       <div className="grid gap-6 lg:grid-cols-3">
-        <div className="lg:col-span-2 rounded-2xl border border-slate-800 bg-slate-850 p-6">
+        <div className="lg:col-span-2 rounded-2xl border border-slate-200 bg-white dark:border-slate-800 dark:bg-slate-850 p-6">
           <div className="mb-5 flex items-center justify-between">
             <div>
-              <h3 className="text-sm font-semibold text-white">Market watchlist</h3>
-              <p className="text-xs text-gray-400">Normalized NGX equity feed</p>
+              <h3 className="text-sm font-semibold text-slate-900 dark:text-white">Market watchlist</h3>
+              <p className="text-xs text-gray-500 dark:text-gray-400">Normalized NGX equity feed</p>
             </div>
             <span className="inline-flex items-center gap-2 text-xs text-neon-green">
               <Activity className="h-3.5 w-3.5" />
               Streaming
             </span>
           </div>
-          <div className="overflow-hidden rounded-xl border border-slate-800">
+          <div className="overflow-hidden rounded-xl border border-slate-200 dark:border-slate-800">
             <table className="w-full text-left text-sm">
-              <thead className="bg-slate-950/60 text-xs uppercase tracking-wider text-gray-400">
+              <thead className="bg-slate-100 text-xs uppercase tracking-wider text-gray-500 dark:bg-slate-950/60 dark:text-gray-400">
                 <tr>
                   <th className="px-4 py-3">Symbol</th>
                   <th className="px-4 py-3">Last</th>
@@ -52,8 +52,8 @@ export function NgxTradingDashboard() {
               </thead>
               <tbody>
                 {symbols.map((row) => (
-                  <tr key={row.symbol} className="border-t border-slate-800 text-gray-300">
-                    <td className="px-4 py-3 font-mono font-semibold text-white">{row.symbol}</td>
+                  <tr key={row.symbol} className="border-t border-slate-200 text-gray-600 dark:border-slate-800 dark:text-gray-300">
+                    <td className="px-4 py-3 font-mono font-semibold text-slate-900 dark:text-slate-900 dark:text-white">{row.symbol}</td>
                     <td className="px-4 py-3">{row.price}</td>
                     <td
                       className={`px-4 py-3 ${
@@ -70,20 +70,20 @@ export function NgxTradingDashboard() {
           </div>
         </div>
 
-        <div className="rounded-2xl border border-slate-800 bg-slate-850 p-6">
+        <div className="rounded-2xl border border-slate-200 bg-white dark:border-slate-800 dark:bg-slate-850 p-6">
           <div className="mb-4 flex items-center gap-2">
             <Layers className="h-4 w-4 text-neon-cyan" />
-            <h3 className="text-sm font-semibold text-white">Feed health</h3>
+            <h3 className="text-sm font-semibold text-slate-900 dark:text-white">Feed health</h3>
           </div>
           <ul className="space-y-3">
             {feedHealth.map((feed) => (
               <li
                 key={feed.channel}
-                className="flex items-center justify-between rounded-lg border border-slate-800 bg-slate-950/60 px-3 py-3"
+                className="flex items-center justify-between rounded-lg border border-slate-200 bg-slate-50 dark:border-slate-800 dark:bg-slate-950/60 px-3 py-3"
               >
                 <div>
-                  <p className="text-xs font-semibold text-white">{feed.channel}</p>
-                  <p className="mt-1 inline-flex items-center gap-1 text-xs text-gray-400">
+                  <p className="text-xs font-semibold text-slate-900 dark:text-white">{feed.channel}</p>
+                  <p className="mt-1 inline-flex items-center gap-1 text-xs text-gray-500 dark:text-gray-400">
                     <Clock className="h-3 w-3" />
                     {feed.latency}
                   </p>
@@ -101,11 +101,11 @@ export function NgxTradingDashboard() {
         </div>
       </div>
 
-      <div className="rounded-2xl border border-slate-800 bg-slate-850 p-6">
+      <div className="rounded-2xl border border-slate-200 bg-white dark:border-slate-800 dark:bg-slate-850 p-6">
         <div className="mb-4 flex items-center justify-between">
           <div>
-            <h3 className="text-sm font-semibold text-white">End-to-end latency</h3>
-            <p className="text-xs text-gray-400">Exchange ingress to ISV API response</p>
+            <h3 className="text-sm font-semibold text-slate-900 dark:text-white">End-to-end latency</h3>
+            <p className="text-xs text-gray-500 dark:text-gray-400">Exchange ingress to ISV API response</p>
           </div>
           <span className="inline-flex items-center gap-1 text-xs font-mono text-neon-cyan">
             <TrendingUp className="h-3.5 w-3.5" />

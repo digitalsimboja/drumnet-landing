@@ -57,12 +57,12 @@ export function ContactForm() {
   }
 
   const inputClass =
-    "w-full rounded-lg border border-slate-700 bg-slate-950/60 px-4 py-3 text-sm text-white placeholder:text-gray-500 focus:border-neon-cyan focus:outline-none focus:ring-1 focus:ring-neon-cyan disabled:opacity-60";
+    "w-full rounded-lg border border-slate-300 bg-slate-50 px-4 py-3 text-sm text-slate-900 placeholder:text-gray-400 focus:border-neon-cyan focus:outline-none focus:ring-1 focus:ring-neon-cyan disabled:opacity-60 dark:border-slate-700 dark:bg-slate-950/60 dark:text-white dark:placeholder:text-gray-500";
 
   return (
     <form onSubmit={handleSubmit} className="space-y-5">
       <div>
-        <label htmlFor="name" className="mb-2 block text-xs font-mono uppercase tracking-wider text-gray-400">
+        <label htmlFor="name" className="mb-2 block text-xs font-mono uppercase tracking-wider text-gray-500 dark:text-gray-400">
           Name
         </label>
         <input
@@ -78,7 +78,7 @@ export function ContactForm() {
       </div>
 
       <div>
-        <label htmlFor="email" className="mb-2 block text-xs font-mono uppercase tracking-wider text-gray-400">
+        <label htmlFor="email" className="mb-2 block text-xs font-mono uppercase tracking-wider text-gray-500 dark:text-gray-400">
           Email
         </label>
         <input
@@ -94,7 +94,7 @@ export function ContactForm() {
       </div>
 
       <div>
-        <label htmlFor="topic" className="mb-2 block text-xs font-mono uppercase tracking-wider text-gray-400">
+        <label htmlFor="topic" className="mb-2 block text-xs font-mono uppercase tracking-wider text-gray-500 dark:text-gray-400">
           Topic
         </label>
         <select
@@ -117,7 +117,7 @@ export function ContactForm() {
       </div>
 
       <div>
-        <label htmlFor="message" className="mb-2 block text-xs font-mono uppercase tracking-wider text-gray-400">
+        <label htmlFor="message" className="mb-2 block text-xs font-mono uppercase tracking-wider text-gray-500 dark:text-gray-400">
           Message
         </label>
         <textarea

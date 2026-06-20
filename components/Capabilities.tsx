@@ -3,13 +3,13 @@ import { CapabilityCard } from "./CapabilityCard";
 
 export function Capabilities() {
   return (
-    <section id="capabilities" className="py-20 md:py-32 px-6 bg-slate-900/30">
+    <section id="capabilities" className="py-20 md:py-32 px-6 bg-slate-100 dark:bg-slate-900/30">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-4">
             Products &amp; Capabilities
           </h2>
-          <p className="text-gray-300 max-w-xl mx-auto">
+          <p className="text-gray-600 dark:text-gray-300 max-w-xl mx-auto">
             Specialized infrastructure for demanding workloads
           </p>
         </div>
