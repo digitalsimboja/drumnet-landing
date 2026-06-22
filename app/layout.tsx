@@ -5,7 +5,7 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "DrumNet | High-Performance Infrastructure & Telemetry Engineering",
   description:
-    "High-performance software consultancy specializing in financial market data engines, IoT telemetry, and solar energy monitoring systems. Built with Go and AWS.",
+    "High-performance software consultancy specializing in financial market data engines, IoT telemetry, and solar energy monitoring systems.",
 };
 
 export default function RootLayout({

@@ -9,6 +9,7 @@ const topics = [
   "General inquiry",
   "VoltStream IoT",
   "NGX Trading Platform",
+  "Drum",
   "Partnership / consulting",
 ];
 

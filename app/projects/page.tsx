@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Activity, ArrowRight, Battery } from "lucide-react";
+import { Activity, ArrowRight, Battery, UtensilsCrossed } from "lucide-react";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { PageHero, SectionHeader } from "@/components/PageHero";
@@ -31,6 +31,21 @@ const projects = [
       "Market-open burst throughput",
     ],
   },
+  {
+    slug: "drum",
+    icon: UtensilsCrossed,
+    title: "Drum",
+    href: "https://www.drum.ng",
+    external: true,
+    description:
+      "One app for team lunches and daily commutes — built for corporate life in West Africa. Group food ordering, scheduled shuttles, and company billing in a single platform.",
+    features: [
+      "Team lunches & group food ordering",
+      "Scheduled corporate shuttles",
+      "AI-powered booking assistant",
+      "Employee, HR, vendor & fleet portals",
+    ],
+  },
 ];
 
 export default function ProjectsPage() {
@@ -60,34 +75,58 @@ export default function ProjectsPage() {
           <div className="max-w-6xl mx-auto">
             <SectionHeader
               title="Projects & Case Studies"
-              description="Two reference platforms that demonstrate DrumNet's engineering depth"
+              description="Reference platforms and products that demonstrate DrumNet's engineering depth"
             />
 
-            <div className="grid md:grid-cols-2 gap-6 lg:gap-8">
-              {projects.map((project) => (
-                <Link
-                  key={project.slug}
-                  href={`/projects/${project.slug}`}
-                  className="group block p-6 md:p-8 rounded-2xl border border-slate-200 bg-white transition-all duration-300 hover:border-neon-cyan/30 hover-glow dark:border-slate-800 dark:bg-slate-850"
-                >
-                  <div className="flex items-start justify-between gap-4">
-                    <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-neon-cyan/10 to-neon-green/10 flex items-center justify-center text-neon-cyan group-hover:bg-neon-cyan/20 transition-colors">
-                      <project.icon className="w-6 h-6" />
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+              {projects.map((project) => {
+                const cardClassName =
+                  "group block p-6 md:p-8 rounded-2xl border border-slate-200 bg-white transition-all duration-300 hover:border-neon-cyan/30 hover-glow dark:border-slate-800 dark:bg-slate-850";
+
+                const cardContent = (
+                  <>
+                    <div className="flex items-start justify-between gap-4">
+                      <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-neon-cyan/10 to-neon-green/10 flex items-center justify-center text-neon-cyan group-hover:bg-neon-cyan/20 transition-colors">
+                        <project.icon className="w-6 h-6" />
+                      </div>
+                      <ArrowRight className="w-5 h-5 text-gray-500 transition group-hover:text-neon-cyan group-hover:translate-x-1" />
                     </div>
-                    <ArrowRight className="w-5 h-5 text-gray-500 transition group-hover:text-neon-cyan group-hover:translate-x-1" />
-                  </div>
-                  <h3 className="mt-6 text-xl font-semibold text-slate-900 dark:text-white mb-3">{project.title}</h3>
-                  <p className="text-gray-700 dark:text-gray-200 mb-6 leading-relaxed">{project.description}</p>
-                  <ul className="space-y-2">
-                    {project.features.map((feature) => (
-                      <li key={feature} className="flex items-center gap-3 text-sm text-gray-600 dark:text-gray-300">
-                        <span className="w-1.5 h-1.5 shrink-0 rounded-full bg-neon-cyan" />
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                </Link>
-              ))}
+                    <h3 className="mt-6 text-xl font-semibold text-slate-900 dark:text-white mb-3">{project.title}</h3>
+                    <p className="text-gray-700 dark:text-gray-200 mb-6 leading-relaxed">{project.description}</p>
+                    <ul className="space-y-2">
+                      {project.features.map((feature) => (
+                        <li key={feature} className="flex items-center gap-3 text-sm text-gray-600 dark:text-gray-300">
+                          <span className="w-1.5 h-1.5 shrink-0 rounded-full bg-neon-cyan" />
+                          {feature}
+                        </li>
+                      ))}
+                    </ul>
+                    {"external" in project && project.external && (
+                      <p className="mt-6 text-sm font-mono text-neon-cyan">drum.ng →</p>
+                    )}
+                  </>
+                );
+
+                if ("external" in project && project.external && project.href) {
+                  return (
+                    <a
+                      key={project.slug}
+                      href={project.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={cardClassName}
+                    >
+                      {cardContent}
+                    </a>
+                  );
+                }
+
+                return (
+                  <Link key={project.slug} href={`/projects/${project.slug}`} className={cardClassName}>
+                    {cardContent}
+                  </Link>
+                );
+              })}
             </div>
           </div>
         </section>
